@@ -19,9 +19,9 @@
             color: #333;
         }
 
-        a { text-decoration: none; color: inherit; }
-
         html { scroll-behavior: smooth; }
+
+        a { text-decoration: none; color: inherit; }
 
         /* ---------- HEADER ---------- */
         header {
@@ -58,19 +58,21 @@
             transform: translateY(-2px);
         }
 
-        /* ---------- HERO ---------- */
+        /* ---------- HERO (VERIFIED IMAGE) ---------- */
         .hero {
-            height: 75vh;
+            min-height: 75vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 2rem;
 
-            background:
+            background-image:
                 linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url('https://images.unsplash.com/photo-1587049352847-0c6f6c2c1f8c?q=80&w=1920&auto=format&fit=crop')
-                center / cover no-repeat;
+                url("https://images.unsplash.com/photo-1587049352847-9c6b2b3b0c99?auto=format&fit=crop&w=1920&q=80");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero h2 {
@@ -123,10 +125,6 @@
         }
 
         /* ---------- PRODUCTS ---------- */
-        .products h2 {
-            margin-bottom: 3rem;
-        }
-
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -155,13 +153,11 @@
 
         .product-info {
             padding: 1.5rem;
-            text-align: center;
         }
 
         .product-card h3 {
             font-family: 'Playfair Display', serif;
             color: #6b3e00;
-            margin-bottom: 0.5rem;
         }
 
         .price {
@@ -179,7 +175,7 @@
         }
 
         @media (max-width: 600px) {
-            .hero h2 { font-size: 2.5rem; }
+            .hero h2 { font-size: 2.4rem; }
             header { flex-direction: column; gap: 1rem; }
         }
     </style>
@@ -202,7 +198,7 @@
         <h2>Pure Organic Honey, Just as Nature Intended</h2>
         <p>
             Small-batch, raw honey sustainably harvested from local Adderbury hives —
-            unfiltered, unprocessed, and naturally fresh
+            unprocessed, preservative-free, and naturally fresh
         </p>
     </div>
 </section>
@@ -211,51 +207,45 @@
     <h2>Our Story</h2>
 
     <p>
-        Clyde & Conrad Honey Co. was founded on a simple belief: exceptional honey begins with
-        healthy bees and a deep respect for the land they live on. Our hives are carefully
-        tended in the countryside surrounding Adderbury, where bees forage freely among
-        wildflowers, clover fields, and hedgerows.
+        Clyde & Conrad Honey Co. is rooted in the belief that exceptional honey begins with
+        healthy bees and respect for the land. Our hives are located in the countryside
+        surrounding Adderbury, where bees forage freely among wildflowers, clover, and native plants.
     </p>
 
     <p>
-        We work in harmony with the seasons, producing small batches of organic honey using
-        traditional, sustainable beekeeping methods. Our bees are never exposed to chemicals
-        or artificial feeding, and we harvest only what the hive can naturally spare.
+        We practice small-scale, organic beekeeping without chemicals, pesticides, or artificial feeding.
+        Our honey is harvested in limited batches, taking only what the bees can naturally spare.
     </p>
 
     <p>
-        Every jar is handled with care and bottled at peak freshness to preserve flavour,
-        texture, and natural goodness. What you enjoy is honey in its purest form — local,
-        honest, and full of character.
+        Each jar is bottled fresh and left unfiltered and unheated to preserve its natural flavour,
+        aroma, and texture — honey exactly as the bees created it.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1484661733453-051029819907?q=80&w=800&auto=format&fit=crop"
-         alt="Organic honey dripping from honeycomb">
+    <img src="https://images.unsplash.com/photo-1484661733453-051029819907?auto=format&fit=crop&w=1200&q=80"
+         alt="Golden honey dripping from honeycomb">
 </section>
 
 <section class="why-natural" id="why-natural">
     <h2>Why Natural</h2>
 
     <p>
-        We believe that honey is at its very best when it is left exactly as nature creates it.
-        All-natural honey offers deeper flavour, a richer aroma, and a more complex character
-        that reflects the flowers and landscapes from which it comes.
+        We believe all-natural honey offers the best flavour and the greatest integrity.
+        When honey is left untouched, it reflects the land, the season, and the flowers from which it came.
     </p>
 
     <p>
-        Unlike mass-produced honey, our honey contains no preservatives, no additives, and no
-        unnecessary processing. We do not heat, dilute, or alter our honey — ensuring that its
-        natural texture, taste, and integrity remain intact.
+        We add no preservatives, no additives, and no unnecessary processing.
+        Our honey is never diluted or altered — only gently extracted and jarred.
     </p>
 
     <p>
-        Choosing natural honey also means choosing a healthier and more sustainable product.
-        By keeping our honey raw and unprocessed, we retain the qualities that make it a
-        nourishing, wholesome food, just as it has been enjoyed for generations.
+        Choosing natural honey means choosing a healthier, more honest product that has been
+        enjoyed for generations, just as nature intended.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=800&auto=format&fit=crop"
-         alt="Golden natural honey flowing slowly">
+    <img src="https://images.unsplash.com/photo-1508175800969-525c72a047dd?auto=format&fit=crop&w=1200&q=80"
+         alt="Beehives in a wildflower field">
 </section>
 
 <section class="products" id="products">
@@ -263,19 +253,19 @@
 
     <div class="product-grid">
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1569183207365-90a2e0262954?q=80&w=600&auto=format&fit=crop" alt="Clover honey jar">
+            <img src="https://images.unsplash.com/photo-1569183207365-90a2e0262954?auto=format&fit=crop&w=800&q=80" alt="Clover honey">
             <div class="product-info">
                 <h3>Crystalised Clover Honey</h3>
-                <p>Smooth, golden honey with a naturally sweet, delicate flavour.</p>
+                <p>Smooth, golden honey with a delicate natural sweetness.</p>
                 <span class="price">£5.00</span>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=600&auto=format&fit=crop" alt="Wildflower honey jar">
+            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80" alt="Wildflower honey">
             <div class="product-info">
                 <h3>Soft Wildflower Honey</h3>
-                <p>Rich, aromatic honey sourced from diverse local blossoms.</p>
+                <p>Rich and aromatic honey from diverse local blossoms.</p>
                 <span class="price">£10.00</span>
             </div>
         </div>
@@ -288,3 +278,4 @@
 
 </body>
 </html>
+
