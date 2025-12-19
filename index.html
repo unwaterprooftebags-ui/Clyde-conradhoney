@@ -18,8 +18,6 @@
             align-items: center;
             box-shadow: 0 3px 10px rgba(0,0,0,0.15);
             z-index: 100;
-            position: sticky; /* Keeps header at top */
-            top: 0;
         }
         header h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #6b3e00; }
 
@@ -41,8 +39,9 @@
         }
 
         .hero {
-            /* CHANGED: New background image of apiary in sunlight */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1508777675199-e7966d153471?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            /* Background: Honeycomb close-up */
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('https://images.pexels.com/photos/5980181/pexels-photo-5980181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
             height: 75vh;
             display: flex;
             justify-content: center;
@@ -50,22 +49,22 @@
             text-align: center;
             padding: 0 2rem;
         }
-        .hero h2, .hero p { font-family: 'Montserrat', sans-serif; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
-        .hero h2 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700; }
-        .hero p { font-size: 1.5rem; font-weight: 500; }
+        .hero h2, .hero p { font-family: 'Montserrat', sans-serif; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero h2 { font-size: 3rem; margin-bottom: 1rem; font-weight: 700; }
+        .hero p { font-size: 1.3rem; font-weight: 500; }
 
         .about { padding: 5rem 2rem; text-align: center; background-color: #fff2e0; }
         .about h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 1rem; color: #6b3e00; }
         .about p { max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #555; line-height: 1.8; }
-        .about img { margin-top:2rem; max-width:80%; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); height: 400px; object-fit: cover;}
+        .about img { margin-top:2rem; max-width:80%; border-radius:12px; }
 
         .products { padding: 5rem 2rem; }
         .products h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; text-align: center; margin-bottom: 3rem; color: #6b3e00; }
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .product-card {
@@ -79,20 +78,14 @@
             transform: translateY(-7px); 
             box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; }
         .product-info { padding: 1.5rem; text-align: center; }
-        .product-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #6b3e00; font-size: 1.4rem; }
-        .product-card p { font-size: 1rem; color: #555; margin-bottom: 1rem; }
-        .price { font-weight: bold; color: #6b3e00; font-size: 1.3rem; display: block; margin-top: auto;}
+        .product-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #6b3e00; font-size: 1.3rem; }
+        .product-card p { font-size: 1rem; color: #555; }
+        .price { font-weight: bold; color: #6b3e00; margin-top: 0.5rem; }
 
         footer { background-color: #6b3e00; color: #fff; text-align: center; padding: 2rem; font-size: 0.95rem; }
-        
         html { scroll-behavior: smooth; }
-        
-        @media (max-width: 600px) {
-            header { flex-direction: column; gap: 1rem; }
-            .hero h2 { font-size: 2.5rem; }
-        }
     </style>
 </head>
 <body>
@@ -118,12 +111,12 @@
             At Clyde & Conrad Honey Co., our journey begins with a deep respect for nature and the hardworking bees that make it all possible. Nestled in the heart of Adderbury, our hives thrive among wildflowers, clover fields, and blossoming orchards, creating honey that is not only rich in flavor but also packed with natural goodness. 
         </p>
         <p>
-            Each jar of our honey is the result of careful, hand-harvested techniques passed down through generations. We prioritize sustainable beekeeping practices, ensuring that our bees flourish while maintaining the delicate balance of our local ecosystem.
+            Each jar of our honey is the result of careful, hand-harvested techniques passed down through generations. We prioritize sustainable beekeeping practices, ensuring that our bees flourish while maintaining the delicate balance of our local ecosystem. From monitoring hive health to gently extracting honey at the peak of ripeness, every step is done with love and dedication.
         </p>
         <p>
-            Our mission is simple: to bring the pure taste of Adderbury’s fields to your table. Whether drizzled over morning toast, stirred into a warm cup of tea, or used in your favorite recipes, our honey delivers a natural sweetness that embodies the essence of our community.
+            Our mission is simple: to bring the pure taste of Adderbury’s fields to your table. Whether drizzled over morning toast, stirred into a warm cup of tea, or used in your favorite recipes, our honey delivers a natural sweetness that embodies the essence of our community and the beauty of the seasons. With Clyde & Conrad Honey Co., every spoonful tells a story of care, passion, and the timeless art of beekeeping.
         </p>
-        <img src="https://images.unsplash.com/photo-1484661733453-051029819907?q=80&w=800&auto=format&fit=crop" alt="Honey dripping from comb">
+        <img src="https://images.pexels.com/photos/33260/honey-sweet-glass-jar.jpg?auto=compress&cs=tinysrgb&w=800" alt="Honey dripping from comb">
     </section>
 
     <section class="products" id="products">
@@ -140,17 +133,15 @@
             const products = [
                 {
                     name: "Crystalised Clover Honey",
-                    description: "Our Crystalised Clover Honey is smooth, golden, and bursting with natural sweetness. Perfect for drizzling over toast or stirring into tea.",
-                    price: "£5.00",
-                    // CHANGED: Placeholder image: Jar of lighter honey
-                    image: "https://images.unsplash.com/photo-1569183207365-90a2e0262954?q=80&w=600&auto=format&fit=crop" 
+                    description: "Our Crystalised Clover Honey is smooth, golden, and bursting with natural sweetness. Perfect for drizzling over toast, stirring into tea, or adding a subtle sweetness to your favorite recipes. Carefully hand-harvested in Adderbury, this honey captures the essence of our local clover fields and preserves the delicate floral aroma in every jar.",
+                    price: "£5",
+                    image: "https://images.pexels.com/photos/8413156/pexels-photo-8413156.jpeg?auto=compress&cs=tinysrgb&w=800"
                 },
                 {
                     name: "Soft Wildflower Honey",
-                    description: "Experience the rich, aromatic flavors of our Soft Wildflower Honey. Sourced from a variety of blossoms across Adderbury’s lush meadows.",
-                    price: "£10.00",
-                    // Placeholder image: Darker/different jar of honey
-                    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80"
+                    description: "Experience the rich, aromatic flavors of our Soft Wildflower Honey. Sourced from a variety of blossoms across Adderbury’s lush meadows, this larger jar offers a vibrant, floral complexity with every spoonful. Ideal for sweetening drinks, baking, or enjoying straight from the jar, our wildflower honey is a true taste of nature’s bounty.",
+                    price: "£10",
+                    image: "https://images.pexels.com/photos/1638202/pexels-photo-1638202.jpeg?auto=compress&cs=tinysrgb&w=800"
                 }
             ];
 
@@ -164,7 +155,7 @@
                     <div class="product-info">
                         <h3>${product.name}</h3>
                         <p>${product.description}</p>
-                        <span class="price">${product.price}</span>
+                        <p class="price">Price: ${product.price}</p>
                     </div>
                 `;
                 productGrid.appendChild(card);
