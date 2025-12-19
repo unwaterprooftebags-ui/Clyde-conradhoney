@@ -39,7 +39,7 @@
         }
 
         .hero {
-            background: url('images/clover-honey.jpg') center/cover no-repeat;
+            background: url('images/hero-honey.jpg') center/cover no-repeat;
             height: 75vh;
             display: flex;
             justify-content: center;
@@ -126,38 +126,40 @@
     </footer>
 
     <script>
-        const products = [
-            {
-                name: "Crystalised Clover Honey",
-                description: "Our Crystalised Clover Honey is smooth, golden, and bursting with natural sweetness. Perfect for drizzling over toast, stirring into tea, or adding a subtle sweetness to your favorite recipes. Carefully hand-harvested in Adderbury, this honey captures the essence of our local clover fields and preserves the delicate floral aroma in every jar.",
-                price: "£5",
-                image: "images/clover-honey.jpg"
-            },
-            {
-                name: "Soft Wildflower Honey",
-                description: "Experience the rich, aromatic flavors of our Soft Wildflower Honey. Sourced from a variety of blossoms across Adderbury’s lush meadows, this larger jar offers a vibrant, floral complexity with every spoonful. Ideal for sweetening drinks, baking, or enjoying straight from the jar, our wildflower honey is a true taste of nature’s bounty.",
-                price: "£10",
-                image: "images/wildflower-honey.jpg"
-            }
-        ];
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = [
+                {
+                    name: "Crystalised Clover Honey",
+                    description: "Our Crystalised Clover Honey is smooth, golden, and bursting with natural sweetness. Perfect for drizzling over toast, stirring into tea, or adding a subtle sweetness to your favorite recipes. Carefully hand-harvested in Adderbury, this honey captures the essence of our local clover fields and preserves the delicate floral aroma in every jar.",
+                    price: "£5",
+                    image: "images/clover-honey.jpg"
+                },
+                {
+                    name: "Soft Wildflower Honey",
+                    description: "Experience the rich, aromatic flavors of our Soft Wildflower Honey. Sourced from a variety of blossoms across Adderbury’s lush meadows, this larger jar offers a vibrant, floral complexity with every spoonful. Ideal for sweetening drinks, baking, or enjoying straight from the jar, our wildflower honey is a true taste of nature’s bounty.",
+                    price: "£10",
+                    image: "images/wildflower-honey.jpg"
+                }
+            ];
 
-        const productGrid = document.getElementById('productGrid');
+            const productGrid = document.getElementById('productGrid');
 
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.classList.add('product-card');
-            card.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <p>${product.description}</p>
-                    <p class="price">Price: ${product.price}</p>
-                </div>
-            `;
-            Add index.html for GitHub Pages
-
-            productGrid.appendChild(card);
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.classList.add('product-card');
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p class="price">Price: ${product.price}</p>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
         });
     </script>
 </body>
 </html>
+Add index.html for GitHub Pages
+
