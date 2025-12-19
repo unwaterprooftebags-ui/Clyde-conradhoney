@@ -4,63 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clyde & Conrad Honey Co.</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; background-color: #fff8f0; color: #333; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #fff8f0;
+            color: #333;
+        }
+
         a { text-decoration: none; color: inherit; }
 
+        /* ---------- HEADER ---------- */
         header {
             background-color: #f6d365;
             padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            z-index: 100;
-            position: sticky; /* Keeps header at top */
+            position: sticky;
             top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         }
-        header h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #6b3e00; }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #6b3e00;
+        }
 
         nav a.nav-button {
-            display: inline-block;
             padding: 0.5rem 1.2rem;
             margin-left: 0.8rem;
             border: 2px solid #6b3e00;
             border-radius: 8px;
             font-weight: 600;
             color: #6b3e00;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
+
         nav a.nav-button:hover {
             background-color: #6b3e00;
             color: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transform: translateY(-2px);
         }
 
+        /* ---------- HERO ---------- */
         .hero {
-            /* CHANGED: New background image of apiary in sunlight */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1508777675199-e7966d153471?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
             height: 75vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 2rem;
+
+            /* Beehives / honey background */
+            background:
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('https://images.unsplash.com/photo-1508777675199-e7966d153471?q=80&w=1920&auto=format&fit=crop')
+                center / cover no-repeat;
         }
-        .hero h2, .hero p { font-family: 'Montserrat', sans-serif; color: #fff; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
-        .hero h2 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700; }
-        .hero p { font-size: 1.5rem; font-weight: 500; }
 
-        .about { padding: 5rem 2rem; text-align: center; background-color: #fff2e0; }
-        .about h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 1rem; color: #6b3e00; }
-        .about p { max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #555; line-height: 1.8; }
-        .about img { margin-top:2rem; max-width:80%; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); height: 400px; object-fit: cover;}
+        .hero h2 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        }
 
-        .products { padding: 5rem 2rem; }
-        .products h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; text-align: center; margin-bottom: 3rem; color: #6b3e00; }
+        .hero p {
+            font-size: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+        }
+
+        /* ---------- ABOUT ---------- */
+        .about {
+            padding: 5rem 2rem;
+            text-align: center;
+            background-color: #fff2e0;
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #6b3e00;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .about img {
+            margin-top: 2rem;
+            max-width: 80%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* ---------- PRODUCTS ---------- */
+        .products {
+            padding: 5rem 2rem;
+        }
+
+        .products h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: #6b3e00;
+        }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -68,110 +133,112 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .product-card {
             background: #fff;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transition: 0.3s ease;
         }
-        .product-card:hover { 
-            transform: translateY(-7px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
-        .product-info { padding: 1.5rem; text-align: center; }
-        .product-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 0.5rem; color: #6b3e00; font-size: 1.4rem; }
-        .product-card p { font-size: 1rem; color: #555; margin-bottom: 1rem; }
-        .price { font-weight: bold; color: #6b3e00; font-size: 1.3rem; display: block; margin-top: auto;}
 
-        footer { background-color: #6b3e00; color: #fff; text-align: center; padding: 2rem; font-size: 0.95rem; }
-        
-        html { scroll-behavior: smooth; }
-        
+        .product-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .product-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #6b3e00;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #6b3e00;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background-color: #6b3e00;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
         @media (max-width: 600px) {
-            header { flex-direction: column; gap: 1rem; }
             .hero h2 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <h1>Clyde & Conrad Honey Co.</h1>
-        <nav>
-            <a href="#about" class="nav-button">About</a>
-            <a href="#products" class="nav-button">Honey</a>
-            <a href="#contact" class="nav-button">Contact</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div>
-            <h2>Liquid Gold from Nature</h2>
-            <p>100% pure, hand-harvested honey from the heart of Adderbury</p>
+<header>
+    <h1>Clyde & Conrad Honey Co.</h1>
+    <nav>
+        <a href="#about" class="nav-button">About</a>
+        <a href="#products" class="nav-button">Honey</a>
+        <a href="#contact" class="nav-button">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Liquid Gold from Nature</h2>
+        <p>100% pure, hand-harvested honey from the heart of Adderbury</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Our Story</h2>
+    <p>
+        At Clyde & Conrad Honey Co., our journey begins with respect for nature and the hardworking bees that make it all possible.
+    </p>
+    <p>
+        Our honey is hand-harvested using sustainable beekeeping practices to protect our bees and environment.
+    </p>
+    <img src="https://images.unsplash.com/photo-1484661733453-051029819907?q=80&w=800&auto=format&fit=crop" alt="Honey comb">
+</section>
+
+<section class="products" id="products">
+    <h2>Our Honey Collection</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1569183207365-90a2e0262954?q=80&w=600&auto=format&fit=crop">
+            <div class="product-info">
+                <h3>Crystalised Clover Honey</h3>
+                <p>Smooth, golden and naturally sweet.</p>
+                <span class="price">£5.00</span>
+            </div>
         </div>
-    </section>
 
-    <section class="about" id="about">
-        <h2>Our Story</h2>
-        <p>
-            At Clyde & Conrad Honey Co., our journey begins with a deep respect for nature and the hardworking bees that make it all possible. Nestled in the heart of Adderbury, our hives thrive among wildflowers, clover fields, and blossoming orchards, creating honey that is not only rich in flavor but also packed with natural goodness. 
-        </p>
-        <p>
-            Each jar of our honey is the result of careful, hand-harvested techniques passed down through generations. We prioritize sustainable beekeeping practices, ensuring that our bees flourish while maintaining the delicate balance of our local ecosystem.
-        </p>
-        <p>
-            Our mission is simple: to bring the pure taste of Adderbury’s fields to your table. Whether drizzled over morning toast, stirred into a warm cup of tea, or used in your favorite recipes, our honey delivers a natural sweetness that embodies the essence of our community.
-        </p>
-        <img src="https://images.unsplash.com/photo-1484661733453-051029819907?q=80&w=800&auto=format&fit=crop" alt="Honey dripping from comb">
-    </section>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?q=80&w=600&auto=format&fit=crop">
+            <div class="product-info">
+                <h3>Soft Wildflower Honey</h3>
+                <p>Rich, aromatic honey from local meadows.</p>
+                <span class="price">£10.00</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="products" id="products">
-        <h2>Our Honey Collection</h2>
-        <div class="product-grid" id="productGrid"></div>
-    </section>
+<footer id="contact">
+    <p> Made in Adderbury |  Fresh from the hive | © 2025 Clyde & Conrad Honey Co.</p>
+</footer>
 
-    <footer id="contact">
-        <p>📍 Made in Adderbury | 🍯 Fresh from the hive | © 2025 Clyde & Conrad Honey Co.</p>
-    </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const products = [
-                {
-                    name: "Crystalised Clover Honey",
-                    description: "Our Crystalised Clover Honey is smooth, golden, and bursting with natural sweetness. Perfect for drizzling over toast or stirring into tea.",
-                    price: "£5.00",
-                    // CHANGED: Placeholder image: Jar of lighter honey
-                    image: "https://images.unsplash.com/photo-1569183207365-90a2e0262954?q=80&w=600&auto=format&fit=crop" 
-                },
-                {
-                    name: "Soft Wildflower Honey",
-                    description: "Experience the rich, aromatic flavors of our Soft Wildflower Honey. Sourced from a variety of blossoms across Adderbury’s lush meadows.",
-                    price: "£10.00",
-                    // Placeholder image: Darker/different jar of honey
-                    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=600&q=80"
-                }
-            ];
-
-            const productGrid = document.getElementById('productGrid');
-
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.classList.add('product-card');
-                card.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                        <span class="price">${product.price}</span>
-                    </div>
-                `;
-                productGrid.appendChild(card);
-            });
-        });
-    </script>
 </body>
 </html>
-Add index.html for GitHub Pages
-
